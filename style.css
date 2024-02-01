@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+}
+
+body {
+  background: url(./imgs/background.jpg);
+  background-position: center;
+}
+
+img {
+  height: 25px;
+}
+
+.container {
+ background-color: #d1d1d1;
+ width: 500px;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 100px auto 0;
+}
+
+.input-task {
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+  border: none;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.input-task:hover{
+  outline: 2px solid red;
+}
+
+.add-task {
+  color: azure;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 120px;
+  background-color: rgba(255, 51, 0, 0.474);
+  padding: 0 20px;
+  font-size: 17px;
+  font-weight: bold;
+  float: right; /* A propriedade float do CSS determina que um elemento deve ser retirado do 
+  seu fluxo normal e colocado ao longo do lado direito ou esquerdo do seu containêr, onde 
+  textos e elementos em linha irão se posicionar ao seu redor */
+  cursor: pointer;
+}
+
+.add-task:hover {
+  color: white;
+  background-color:  rgba(255, 51, 0, 0.67);
+  transition: 0.2s ease-in-out;
+  -webkit-box-shadow:0px 0px 46px 9px rgba(255,46,46,0.9);
+  -moz-box-shadow: 0px 0px 46px 9px rgba(255,46,46,0.9);
+   box-shadow: 0px 0px 46px 9px rgba(255,46,46,0.9);
+}
+
+.add-task:active{
+  background-color: rgb(160, 10, 5);
+}
+
+.list-task {
+  width: 100%; /* Faz com que o conteúdo ocupe 100% da DIV */
+  list-style: none;
+  margin-top: 30px;
+}
+
+.task {
+  background-color: #f2f2f2;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between; /* O Space Between faz com que os itens tomem o maximo possivel de espaço entre eles */
+  padding: 0 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+img {
+  height: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+@-webkit-keyframes pulse {
+  from {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  @keyframes pulse {
+  from {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  .task:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+
+.done {
+  -webkit-box-shadow:0px 0px 33px 0px rgba(46,255,49,0.9);
+  -moz-box-shadow: 0px 0px 33px 0px rgba(46,255,49,0.9);
+  box-shadow: 0px 0px 33px 0px rgba(46,255,49,0.9);
+  background-color: rgba(21, 219, 7, 0.603);
+  text-decoration: line-through;
+}
+
+
